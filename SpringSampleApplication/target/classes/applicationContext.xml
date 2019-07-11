@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        <bean id="employeeOneRef" class="com.vtalent.ioc.EmployeeOne">
+        <constructor-arg type="int" value="100">
+        </constructor-arg>
+        <constructor-arg value="info"></constructor-arg>
+        </bean>
+        
+	<bean id="hrRef" class="com.vtalent.ioc.HR">
+		<property name="packageSalary" value="500000"></property>
+		<property name="leaveCount" value="25"></property>
+	</bean>
+
+	<bean id="employeeRef" class="com.vtalent.ioc.Employee">
+		<property name="employeeId" value="100"></property>
+		<property name="employeeName" value="VtalentInfo"></property>
+		<property name="employeeSalary" value="25000.00"></property>
+		<property name="hr" ref="hrRef"></property>
+		<property name="skillSet">
+			<list>
+				<value>Java</value>
+				<value>DotNet</value>
+			</list>
+		</property>
+	</bean>
+
+</beans>
