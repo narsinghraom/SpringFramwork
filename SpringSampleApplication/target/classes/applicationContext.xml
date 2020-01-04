@@ -13,6 +13,17 @@
 		<property name="packageSalary" value="500000"></property>
 		<property name="leaveCount" value="25"></property>
 	</bean>
+	<bean id="addressRef"  class="com.vtalent.ioc.Address">
+	<property name="pincode" value="5556678"></property>
+	<property name="city" value="hyderabad"></property>
+	<property name="state" value="telengana"></property>
+	<property name="country" value="india"></property>
+	</bean>
+	<bean id="payrollRef" class="com.vtalent.ioc.Payroll">
+	<property name="annumpackage" value="2.4"></property>
+	<property name="monthlysalary" value="2800"></property>
+	<property name="employeeId" value="285461"></property>
+	</bean>
 
 	<bean id="employeeRef" class="com.vtalent.ioc.Employee">
 		<property name="employeeId" value="100"></property>
@@ -25,6 +36,15 @@
 				<value>DotNet</value>
 			</list>
 		</property>
+		<property name="Address">
+		<map>
+		<entry key="1" value-ref="addressRef"></entry>
+		</map></property>
+		<property name="Payroll">
+		<map>
+		<entry key="1" value-ref="payrollRef"></entry>
+	</map>
+	</property>
 	</bean>
 
 </beans>

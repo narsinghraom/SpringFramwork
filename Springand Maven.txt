@@ -1,0 +1,58 @@
+Maven:
+it is a build tool. (BUilding the project with all relavent jars)
+@-> Ant build tool (default for NetBeans IDE).
+-> to build the project with external jar files, we need to manulally download and store 
+in one location and that location we will configure in ant.xml
+
+Maven: we will configure in POM.XML (Project Object Mapping)
+-> maven itself have an repository. (Maven Repo)
+-> In the Maven repository we have all the relavent jar files.
+ex: spring IOC - 7 jars
+Spring JDBC- 3 jars
+MVC - 5 jars
+-> Instead of downloading manually by ourself, if we configure in pom.xml automatically the
+maven will download from maven repository and it will store in local drive
+.m2 folder
+-> what ever the jar file we need we will call it as dependency jar,
+so all the dependecy jar files will be congigured in dependencies tag.
+-> the dependency we will configure as 
+*Artifact ID - class name or context name
+*groupId  is nothing but an package
+*version.
+Please refer in https://mvnrepository.com/
+Ex:  <dependencies>
+<dependency>
+<artifactId> Servlets</artifactId>
+<group-Id> javax.servlet</group-Id>
+<version>5.4</version>
+<dependency>
+</dependencies>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 package com.vtalent.ioc;
 
 import java.util.List;
+import java.util.Map;
 
 public class Employee {
 	private int employeeId;
@@ -8,6 +9,27 @@ public class Employee {
 	private double employeeSalary;
 	private HR hr;
 	private List<String> skillSet;
+	private long mobilenumber;
+	private Map<Integer,Address>Address;
+	public long getMobilenumber() {
+		return mobilenumber;
+	}
+	public void setMobilenumber(long mobilenumber) {
+		this.mobilenumber = mobilenumber;
+	}
+	public Map<Integer, Address> getAddress() {
+		return Address;
+	}
+	public void setAddress(Map<Integer, Address> address) {
+		Address = address;
+	}
+	public Map<Integer, Payroll> getPayroll() {
+		return payroll;
+	}
+	public void setPayroll(Map<Integer, Payroll> payroll) {
+		this.payroll = payroll;
+	}
+	private Map<Integer,Payroll>payroll;
 	
 	
 	

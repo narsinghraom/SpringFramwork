@@ -18,14 +18,15 @@ public class TestClass {
 		
 		ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 		
-		EmployeeOne employeeOne = (EmployeeOne)context.getBean("employeeOneRef");
+		EmployeeOne employeeOne =  (EmployeeOne)context.getBean("employeeOneRef");
 		System.out.println(employeeOne);
 		
 		Employee employee = (Employee)context.getBean("employeeRef");
 		System.out.println("Id = "+employee.getEmployeeId()+"--"+"Name ="+employee.getEmployeeName()+"--"+"salary ="+employee.getEmployeeSalary());;
-		System.out.println("Packavge = "+employee.getHr().getPackageSalary());
+		System.out.println("Package = "+employee.getHr().getPackageSalary());
 		System.out.println("Leave count= "+employee.getHr().getLeaveCount());
 		System.out.println("SkillSet "+employee.getSkillSet());
+		System.out.println(employee.getAddress());
+		System.out.println(employee.getPayroll());
 	}
-
-}
+	}
